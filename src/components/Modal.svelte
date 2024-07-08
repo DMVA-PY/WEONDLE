@@ -14,6 +14,7 @@
 	}
 </script>
 
+<!-- TUTORIAL DIV -->
 <div
 	class:visible
 	class="overlay {fullscreen ? 'fullscreen' : 'popup'}"
@@ -46,7 +47,7 @@
 		position: absolute;
 		opacity: 0;
 		inset: 0;
-		background: #0008;
+		background:beige
 	}
 	.fullscreen.overlay {
 		background: var(--bg-primary);

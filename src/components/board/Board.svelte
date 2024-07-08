@@ -69,10 +69,13 @@
 </script>
 
 {#if showCtx}
+
 	<ContextMenu {pAns} {pSols} {x} {y} {word} />
+	
 {/if}
 
 <div class="board" on:touchstart={swipeStart} on:touchend={swipeEnd} on:touchmove|preventDefault>
+
 	{#each value as _, i}
 		<Row
 			num={i}
@@ -83,11 +86,13 @@
 			on:ctx={(e) => context(e.detail.x, e.detail.y, i, value[i])}
 		/>
 	{/each}
+
 	{#if icon}
 		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
 			<path d={icon} stroke-width="14" />
 		</svg>
 	{/if}
+
 	{#if tutorial}
 		<div
 			transition:scale
@@ -95,7 +100,7 @@
 			on:click={() => dispatch("closeTutPopUp")}
 			on:keydown={() => dispatch("closeTutPopUp")}
 		>
-			double tap a row to see a word's definition, or how many words can be played there
+			Doble toque en una fila para ver la definición de una palabra o cuántas palabras se pueden jugar allí.
 			<span class="ok">OK</span>
 		</div>
 	{/if}
@@ -121,9 +126,9 @@
 		width: min(130%, 100vw);
 		max-height: 100%;
 	}
-	path {
+/* 	path {
 		stroke: var(--mode-symbol-color);
-	}
+	} */
 	.tutorial {
 		top: calc(100 / var(--rows) * 1%);
 	}

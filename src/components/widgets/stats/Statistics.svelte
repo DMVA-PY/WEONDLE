@@ -32,7 +32,7 @@
 	}
 </script>
 
-<h3>Statistics ({modeData.modes[$mode].name})</h3>
+<h3>Estadísticas <!-- ({modeData.modes[$mode].name}) --></h3>
 <div>
 	{#each stats as stat}
 		<Stat name={stat[0]} stat={stat[1]} />

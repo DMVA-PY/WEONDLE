@@ -20,24 +20,25 @@
 		}
 		return cache.get(word);
 	}
+	
 </script>
 
 <div class="def">
 	{#await getWordData(word)}
-		<h4>Fetching definition...</h4>
+		<h4>Buscando definición...</h4>
 	{:then data}
 		<h2>{word}</h2>
 		<em>{data.meanings[0].partOfSpeech}</em>
 		<ol>
 			{#if word !== data.word}
-				<li>variant of {data.word}.</li>
+				<li>variante de {data.word}.</li>
 			{/if}
 			{#each data.meanings[0].definitions.slice(0, 1 + alternates - (word !== data.word ? 1 : 0)) as def}
 				<li>{def.definition}</li>
 			{/each}
 		</ol>
 	{:catch}
-		<div>Your word was <strong>{word}</strong>. (failed to fetch definition)</div>
+		<div>La palabra era <strong>{word}</strong>. weondle (failed to fetch definition)</div>
 	{/await}
 </div>
 

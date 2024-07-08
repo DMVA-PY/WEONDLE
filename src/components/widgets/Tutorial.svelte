@@ -5,54 +5,41 @@
 	export let visible: boolean;
 </script>
 
-<h3>how to play</h3>
-<div>Guess the <strong>WORDLE</strong> in {ROWS} tries.</div>
-<div>Each guess must be a valid {COLS} letter word. Hit the enter button to submit.</div>
+<h3>COMO JUGAR WEONDLE</h3>
+<div>Adivina la palabra en {ROWS} intentos.</div>
+<div>Cada intento debe ser una palabra válida de {COLS}.</div>
 <div>
-	After each guess, the color of the tiles will change to show how close your guess was to the
-	word.
+	Después de cada intento, el color de las casillas cambiará para mostrar qué tan cerca estuvo tu intento de la palabra.
 </div>
+
 <div class:complete={visible} class="examples">
-	<div><strong>Examples</strong></div>
+	<div><strong>Ejemplos</strong></div>
 	<div class="row">
-		<Tile value="w" state="🟩" />
-		<Tile value="e" state="🔳" />
-		<Tile value="a" state="🔳" />
-		<Tile value="r" state="🔳" />
-		<Tile value="y" state="🔳" />
+		<Tile value="W" state="🟩" />
+		<Tile value="E" state="🔳" />
+		<Tile value="O" state="🔳" />
+		<Tile value="N" state="🔳" />
+		<Tile value="A" state="🔳" />
 	</div>
-	<div>The letter <strong>W</strong> is in the word and in the correct spot.</div>
+	<div>La letra <strong>W</strong> se encuentra en la palabra y esta en el lugar correcto</div>
 	<div class="row">
-		<Tile value="p" state="🔳" />
-		<Tile value="i" state="🟨" />
-		<Tile value="l" state="🔳" />
-		<Tile value="l" state="🔳" />
-		<Tile value="s" state="🔳" />
+		<Tile value="B" state="🔳" />
+		<Tile value="A" state="🟨" />
+		<Tile value="C" state="🔳" />
+		<Tile value="A" state="🔳" />
+		<Tile value="N" state="🔳" />
 	</div>
-	<div>The letter <strong>I</strong> is in the word but in the wrong spot.</div>
+	<div>La letra <strong>I</strong> se encuentra en la palabra pero esta en el lugar incorrecto.</div>
 	<div class="row">
-		<Tile value="v" state="🔳" />
-		<Tile value="a" state="🔳" />
-		<Tile value="g" state="🔳" />
-		<Tile value="u" state="⬛" />
-		<Tile value="e" state="🔳" />
+		<Tile value="W" state="🔳" />
+		<Tile value="A" state="🔳" />
+		<Tile value="T" state="🔳" />
+		<Tile value="O" state="⬛" />
+		<Tile value="N" state="🔳" />
 	</div>
-	<div>The letter <strong>U</strong> is not in the word in any spot.</div>
+	<div>La letra <strong>O</strong> no se encuentra en la palabra.</div>
 </div>
-<div>
-	This is a recreation of the original <a
-		href="https://www.nytimes.com/games/wordle/"
-		target="_blank"
-		rel="noreferrer">Wordle</a
-	>
-	by Josh Wardle with additional modes and features, allowing you to play infinite wordles. Switch
-	to infinite mode to play an unlimited number of times.
-	<br /><br />
-	Open the settings menu to see some of the additional features.
-	<br />
-	Written with Svelte, in Typescript by
-	<a href="https://github.com/MikhaD" target="_blank" rel="noreferrer">MikhaD</a>.
-</div>
+
 
 <style lang="scss">
 	div {
@@ -60,7 +47,6 @@
 	}
 	.examples {
 		border-top: 1px solid var(--border-primary);
-		border-bottom: 1px solid var(--border-primary);
 		:global(.row > *) {
 			height: 100%;
 			aspect-ratio: 1;
@@ -71,7 +57,7 @@
 	}
 	.row {
 		height: 40px;
-		display: flex;
+		display: flex;	
 		gap: 4px;
 	}
 </style>
