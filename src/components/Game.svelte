@@ -57,7 +57,7 @@
 
 	function submitWord() {
 		if (game.latestWord.length !== COLS) {
-			toaster.pop("Not enough letters");
+			toaster.pop("Cantidad de letras insuficiente, gillipodle");
 			board.shake(game.guesses);
 		} else if (words.contains(game.latestWord)) {
 			if (game.guesses > 0) {
@@ -70,7 +70,7 @@
 						board.shake(game.guesses);
 						return;
 					} else if (hm.type === "🟨") {
-						toaster.pop(`Guess must contain ${hm.char.toUpperCase()}`);
+						toaster.pop(`La palabra debe contener ${hm.char.toUpperCase()}`);
 						board.shake(game.guesses);
 						return;
 					}
@@ -85,7 +85,7 @@
 			if (game.lastWord === word) win();
 			else if (game.guesses === ROWS) lose();
 		} else {
-			toaster.pop("Not in word list");
+			toaster.pop("La palabra no existe, gillipodle");
 			board.shake(game.guesses);
 		}
 	}

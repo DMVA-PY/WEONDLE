@@ -8,9 +8,9 @@ export const COLS = 5;
 export const words = {
 	...wordList,
 	contains: (word: string) => {
-		return wordList.words.includes(word) || wordList.valid.includes(word);
+	  return wordList.words.includes(word) || wordList.valid.includes(word);
 	},
-};
+  };
 
 class Tile {
 	public value: string;

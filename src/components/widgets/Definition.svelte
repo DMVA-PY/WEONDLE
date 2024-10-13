@@ -10,7 +10,7 @@
 	async function getWordData(word: string): Promise<DictionaryEntry> {
 		if (!cache.has(word)) {
 			const data = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`, {
-				mode: "cors",
+				mode: "cors",	
 			});
 			if (data.ok) {
 				cache.set(word, (await data.json())[0]);
@@ -38,7 +38,7 @@
 			{/each}
 		</ol>
 	{:catch}
-		<div>La palabra era <strong>{word}</strong>. weondle (failed to fetch definition)</div>
+		<div>La palabra era <strong>{word}</strong>. gillipodle ()</div>
 	{/await}
 </div>
 

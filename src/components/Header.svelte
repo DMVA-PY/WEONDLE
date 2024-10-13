@@ -50,7 +50,7 @@
 			toaster.pop(modeData.modes[$mode].name);
 		}}
 	>
-		weondle
+		GILLIPODLE
 	</h1>
 
 	<div class="icons">

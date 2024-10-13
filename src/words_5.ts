@@ -52,6 +52,8 @@ const words = {
 		"tinca",
 		"chuña"
 	],
+
+	  
 	"valid": [
 		"sobre",
 		"entre",
