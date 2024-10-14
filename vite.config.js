@@ -4,7 +4,7 @@ import { version } from "./package.json";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/GILLIPODLE/",
+  base: "",
   plugins: [svelte({
     preprocess: vitePreprocess()
   })],
