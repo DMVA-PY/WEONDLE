@@ -25,11 +25,8 @@ type GameBoard = {
 type SettingType = "switch" | "dropdown" | "custom";
 
 type DictionaryEntry = {
+  	definition: string;
 	word: string;
-	phonetic: string;
-	phonetics: Phonetic[];
-	origin: string;
-	meanings: Meaning[];
 };
 
 type Meaning = {

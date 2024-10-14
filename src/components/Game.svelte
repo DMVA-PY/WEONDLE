@@ -125,7 +125,8 @@
 		modeData.modes[$mode].historical = false;
 		modeData.modes[$mode].seed = newSeed($mode);
 		game = new GameState($mode, localStorage.getItem(`state-${$mode}`));
-		word = words.words[seededRandomInt(0, words.words.length, modeData.modes[$mode].seed)];
+		const randomWordIndex = seededRandomInt(0, words.words.length, modeData.modes[$mode].seed);
+		word = words.words[randomWordIndex].word;
 		$letterStates = new LetterStates();
 		showStats = false;
 		showRefresh = false;

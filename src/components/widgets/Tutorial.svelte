@@ -5,7 +5,7 @@
 	export let visible: boolean;
 </script>
 
-<h3>COMO JUGAR WEONDLE</h3>
+<h3>COMO JUGAR GILLIPODLE</h3>
 <div>Adivina la palabra en {ROWS} intentos.</div>
 <div>Cada intento debe ser una palabra válida de {COLS}.</div>
 <div>

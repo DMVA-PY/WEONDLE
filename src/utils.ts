@@ -7,8 +7,15 @@ export const COLS = 5;
 
 export const words = {
 	...wordList,
-	contains: (word: string) => {
-	  return wordList.words.includes(word) || wordList.valid.includes(word);
+	contains: (word: string): boolean => {
+	  // Check if the word exists in the words array (checking the word property of each object)
+	  const wordExists = wordList.words.some(entry => entry.word.toLowerCase() === word.toLowerCase());
+	  
+	  // Also check if the word exists in the valid list
+	  const validWordExists = wordList.valid.includes(word);
+  
+	  // Return true if the word exists in either
+	  return wordExists || validWordExists;
 	},
   };
 
